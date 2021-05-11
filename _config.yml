@@ -1,20 +1,30 @@
-# Site settings
-title: iproj222's blog
-description: blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://iproj222.github.io/" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title:               iproj222's blog
+url:                 https://iproj222.github.io
+baseurl:             ""
 
-# User settings
-username: Mauricio Urraco
-user_description: I\'m a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I have been immersed in the <b>crypto-world</b> working for Radix, a London based startup trying to create the next massive scalable DLT. I'm one of the two guys behind all the JS related stuff.
-user_title: Software Engineer
-email: iproj222@gmail.com
-name : Jonghun Kim
-# twitter_username: lorem_ipsum
-github_username:  iproj222
-# gplus_username:  lorem_ipsum
+markdown:            kramdown
+highlighter:         rouge
 
-theme: mere-blog-theme
-remote_theme: chrisrhymes/mere-blog-theme
+exclude:             ['*.sublime-*', 'README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'vendor/bundle']
 
-exclude: ['package.json', 'src' , 'node_modules']
+permalink:           pretty
+paginate:            5
+paginate_path:       /blog/:num
+
+blog:
+  truncated_preview: false
+
+sass:
+  sass_dir:          _sass
+  style:             :compressed
+
+author:
+  name:              Jonghun Kim
+  url:               iproj222.github.io
+  email:             iproj222@gmail.com
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-gist
+

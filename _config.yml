@@ -1,5 +1,5 @@
-title:               jonghunkimm's blog
-url:                 jonghunkimm.github.io
+title:               jongdory's blog
+url:                 jongdory.github.io
 
 baseurl:             ""
 
@@ -21,8 +21,8 @@ sass:
 
 author:
   name:              Jonghun Kim
-  url:               jonghunkimm.github.io
-  email:             jonghunkimm@gmail.com
+  url:               jongdory.github.io
+  email:             jongdory@gmail.com
 
 plugins:
   - jekyll-coffeescript

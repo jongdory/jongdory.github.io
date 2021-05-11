@@ -1,5 +1,6 @@
-title:               iproj222's blog
-url:                 https://iproj222.github.io
+title:               jonghunkimm's blog
+url:                 jonghunkimm.github.io
+
 baseurl:             ""
 
 markdown:            kramdown
@@ -20,8 +21,8 @@ sass:
 
 author:
   name:              Jonghun Kim
-  url:               iproj222.github.io
-  email:             iproj222@gmail.com
+  url:               jonghunkimm.github.io
+  email:             jonghunkimm@gmail.com
 
 plugins:
   - jekyll-coffeescript

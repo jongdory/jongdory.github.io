@@ -5,6 +5,8 @@ truncated_preview: true
 excerpt_separator: <!--more-->
 ---
 
+Celeste also supports truncated post previews that are customizable on a per-post basis. This is a sample of how a truncated post looks like. Click on **Read more** to see the rest of the post!
+
 <div class="message">
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 </div>

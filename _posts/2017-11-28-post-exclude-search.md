@@ -4,6 +4,19 @@ search: false
 categories: 
   - posts
 last_modified_at: 2018-02-19T08:06:00-05:00
+# title: "docker 개념 입문"
+# header:
+#   image: https://miro.medium.com/max/1200/1*Y5hFnMpixqzmWXOp4EQGUQ.jpeg
+# categories:
+#   - docker
+# tags:
+#   - container
+#   - deployment
+#   - virtualization
+# toc: true
+# toc_label: "목차"
+# toc_icon: "heart"
+# toc_sticky: true
 ---
 
 This post should not appear in the search index because it has the following YAML Front Matter:

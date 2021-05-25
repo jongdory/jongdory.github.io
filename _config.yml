@@ -17,18 +17,17 @@ author:
   name             : "Jonghun Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Hanyang university Computer Science"
-  location         : "Korea"
-  email            :
+  email            : iproj222@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:iproj222@email.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jongdory"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/jongdory"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:iproj222@email.com"
 
 # Site Footer
 footer:

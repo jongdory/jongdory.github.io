@@ -2,7 +2,7 @@
 search: false
 title: LSTM을 이용한 Ethereum 시세 예측
 categories: 
-  - posts
+  - blog
 last_modified_at: 2021-05-25T08:06:00-05:00
 ---
 

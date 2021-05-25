@@ -2,7 +2,7 @@
 title:  "Exclude Post from Search Index"
 search: false
 categories: 
-  - posts
+  - blog
 last_modified_at: 2018-02-19T08:06:00-05:00
 # title: "docker 개념 입문"
 # header:

@@ -14,10 +14,21 @@
     {% include head/custom.html %}
   </head>
 
+<<<<<<< HEAD
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
     {% include_cached masthead.html %}
+=======
+  <body>
+    <nav class="nav-main">
+      <ul>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
+        <li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/">J</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">blog</a></li>
+      </ul>
+    </nav>
+>>>>>>> a27da28832d7e86b8a6f168dfd3d658906736b73
 
     <div class="initial-content">
       {{ content }}

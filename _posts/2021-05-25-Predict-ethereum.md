@@ -1,6 +1,10 @@
 ---
 layout: post
+search: false
 title: LSTM을 이용한 Ethereum 시세 예측
+categories: 
+  - Jekyll
+last_modified_at: 2021-05-25T08:06:00-05:00
 ---
 
 Celeste is a lightweight Jekyll theme that features a minimalist, content-first design. It places your content center stage and lets your readers view them in a clutter-free environment without visual distractions. It is based on [Poole](https://github.com/poole/poole), the Jekyll butler, by [@mdo](https://github.com/mdo).

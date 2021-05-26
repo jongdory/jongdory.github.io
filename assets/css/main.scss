@@ -7,7 +7,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-@import url(‘https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap&subset=korean’);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
 
 html {
     font-size: 12px; // change to whatever
@@ -26,12 +26,11 @@ html {
   }
   
   .highlight {
-    font-family: $monospace;
+    font-family: 'Nanum Gothic Coding', serif;
     font-size: $type-size-4-5;
   }
   
   .language-plaintext {
-    font-family: $monospace;
+    font-family: 'Nanum Gothic Coding', serif;
     font-size: $type-size-5;
-    background: #c0ffee;
   }

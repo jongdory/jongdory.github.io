@@ -32,7 +32,7 @@ words_per_minute         : 200
 # Site Author
 author:
   name             : "Jonghun Kim"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Hanyang university Computer Science"
   email            : iproj222@gmail.com
   links:

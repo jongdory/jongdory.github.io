@@ -18,7 +18,7 @@ locale                   : "ko-kr"
 title                    : "블로그"
 title_separator          : "-"
 name                     : "Jonghun Kim"
-description              : "An amazing website."
+description              : 
 url                      : "https://jongdory.github.io" # the base hostname & protocol for your site e.g. 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

@@ -1,3 +1,15 @@
+---
+search: false
+title: LSTM을 이용한 Ethereum 시세 예측
+categories: 
+  - RNN
+tags:
+  - LSTM
+  - Ethereum
+toc: true  
+last_modified_at: 2021-05-26T08:06:00-05:00
+---
+
 # LSTM을 이용한 이더리움 시세 예측
 
 ```
@@ -8,13 +20,13 @@
 
 ## RNN(Recurrent Neural Network)
 
-![RNN](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\RNN.png)
+![RNN](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\2021-05-26-Predict-ethereum\RNN.png)
 
  **RNN**은 시간의 흐름에 따라 관찰되는 **시계열 데이터 또는 입력과 출력을 시퀀스 단위로 처리**하기 위해 고안된 모델입니다. 피드 포워드 신경망(Feed Forward Neural Network)은 은닉층에서 활성화 함수를 지난 결과값이 출력층 방향으로 향합니다. 그러나 RNN은 은닉층에서 나온 결과값을 출력층 방향으로 보내면서도 다시 다음 은닉층의 입력으로 보내는 특징이 있습니다.  RNN의 은닉층에서 결과를 내보내는 역할을 하는 노드를 **셀(Cell)**이라고 합니다. 셀은 이전의 맥락을 기억하려하는 메모리 역할을 합니다. 
 
 ## LSTM(Long Short-Term Memory)
 
-![LSTM](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\LSTM.png)
+![LSTM](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\2021-05-26-Predict-ethereum\LSTM.png)
 
 RNN은 **앞부분의 맥락이 길어질수록 앞부분의 정보가 충분히 전달되지 못하는 현상**이 있습니다. 활성화 함수로 tanh(hyperbolic tangent, 하이퍼볼릭 탄젠트)를 사용하기 때문입니다. tanh를 통과한 값은 -1과 1 사이이기 때문에 은닉층을 통과할수록 기울기가 사라지는 **기울기 소실 문제(vanishing gradient problem)**가 발생합니다.
 
@@ -55,7 +67,7 @@ df = df.rename(index=df["date"])
 column들을 살펴보면 open은 시가, hign는 고가, low는 저가, close는 종가, volume은 거래량입니다.
 df를 확인해보면 다음과 같습니다.
 
-![df](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\df.png)
+![df](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\2021-05-26-Predict-ethereum\df.png)
 
 총 4340개의 행이 있습니다. 1시간 단위의 차트 데이터이므로 약 180일간의 이더리움 차트 데이터 입니다.
 
@@ -75,7 +87,7 @@ plt.ylabel('price')
 
 차트를 시각화해보면 다음과 같습니다.
 
-![eth chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\eth chart.png)
+![eth_chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\2021-05-26-Predict-ethereum\eth_chart.png)
 
 ## 데이터 정규화 및 데이터셋 분리
 
@@ -246,7 +258,7 @@ plt.legend()
 plt.show() 
 ```
 
-![predict chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\predict chart.png)
+![predict_chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\2021-05-26-Predict-ethereum\predict_chart.png)
 
 ## 레퍼런스
 

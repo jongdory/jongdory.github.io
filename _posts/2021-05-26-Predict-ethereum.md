@@ -8,13 +8,13 @@
 
 ## RNN(Recurrent Neural Network)
 
-![RNN](C:\Users\KJH\Desktop\github.io\iproj222.github.io\_posts\2021-05-26-Predict-ethereum\RNN.png)
+![RNN](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\RNN.png)
 
  **RNN**은 시간의 흐름에 따라 관찰되는 **시계열 데이터 또는 입력과 출력을 시퀀스 단위로 처리**하기 위해 고안된 모델입니다. 피드 포워드 신경망(Feed Forward Neural Network)은 은닉층에서 활성화 함수를 지난 결과값이 출력층 방향으로 향합니다. 그러나 RNN은 은닉층에서 나온 결과값을 출력층 방향으로 보내면서도 다시 다음 은닉층의 입력으로 보내는 특징이 있습니다.  RNN의 은닉층에서 결과를 내보내는 역할을 하는 노드를 **셀(Cell)**이라고 합니다. 셀은 이전의 맥락을 기억하려하는 메모리 역할을 합니다. 
 
 ## LSTM(Long Short-Term Memory)
 
-![LSTM](C:\Users\KJH\Desktop\github.io\iproj222.github.io\_posts\2021-05-26-Predict-ethereum\LSTM.png)
+![LSTM](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\LSTM.png)
 
 RNN은 **앞부분의 맥락이 길어질수록 앞부분의 정보가 충분히 전달되지 못하는 현상**이 있습니다. 활성화 함수로 tanh(hyperbolic tangent, 하이퍼볼릭 탄젠트)를 사용하기 때문입니다. tanh를 통과한 값은 -1과 1 사이이기 때문에 은닉층을 통과할수록 기울기가 사라지는 **기울기 소실 문제(vanishing gradient problem)**가 발생합니다.
 
@@ -43,17 +43,19 @@ bithumb api를 사용하여 이더리움의 1시간 KRW 차트를 불러옵니�
 ```python
 import time
 
-df.rename(columns={0:'time',1:'open', 2:'high',3:'low',4: 'close',5: 'volume'},\ inplace=True)
+df.rename(columns={0:'time',1:'open', 2:'high',3:'low',4: 'close',5: 'volume'},\
+          inplace=True)
 df=df[['time','open', 'close', 'high','low','volume']].astype("float")
 df.reset_index(drop=True, inplace=True)
-df["date"]=df["time"].apply(lambda x:time.strftime('%Y-%m-%d %H:%M',\ time.localtime(x/1000)))
+df["date"]=df["time"].apply(lambda x:time.strftime('%Y-%m-%d %H:%M',\
+                                                   time.localtime(x/1000)))
 df = df.rename(index=df["date"])
 ```
 
 column들을 살펴보면 open은 시가, hign는 고가, low는 저가, close는 종가, volume은 거래량입니다.
 df를 확인해보면 다음과 같습니다.
 
-![df](C:\Users\KJH\Desktop\github.io\iproj222.github.io\_posts\2021-05-26-Predict-ethereum\df.png)
+![df](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\df.png)
 
 총 4340개의 행이 있습니다. 1시간 단위의 차트 데이터이므로 약 180일간의 이더리움 차트 데이터 입니다.
 
@@ -73,7 +75,7 @@ plt.ylabel('price')
 
 차트를 시각화해보면 다음과 같습니다.
 
-![eth chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\_posts\2021-05-26-Predict-ethereum\eth chart.png)
+![eth chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\eth chart.png)
 
 ## 데이터 정규화 및 데이터셋 분리
 
@@ -117,8 +119,10 @@ X_test_tensors = Variable(torch.Tensor(X_test))
 y_train_tensors = Variable(torch.Tensor(y_train))
 y_test_tensors = Variable(torch.Tensor(y_test))
 
-X_train_tensors_final = torch.reshape(X_train_tensors,   (X_train_tensors.shape[0], 1,\ X_train_tensors.shape[1]))
-X_test_tensors_final = torch.reshape(X_test_tensors,  (X_test_tensors.shape[0], 1,\ X_test_tensors.shape[1])) 
+X_train_tensors_final = torch.reshape(\
+    X_train_tensors,(X_train_tensors.shape[0], 1, X_train_tensors.shape[1]))
+X_test_tensors_final = torch.reshape(\
+    X_test_tensors,  (X_test_tensors.shape[0], 1, X_test_tensors.shape[1])) 
 ```
 
 
@@ -143,10 +147,12 @@ class LSTM1(nn.Module):
         self.relu = nn.ReLU() 
 
     def forward(self,x):
-        h_0 = Variable(torch.zeros(self.num_layers, x.size(0),\ self.hidden_size)).to(device) #hidden state
-        c_0 = Variable(torch.zeros(self.num_layers, x.size(0),\ self.hidden_size)).to(device) #internal state   
+        h_0 = Variable(torch.zeros(self.num_layers, x.size(0),\
+                                   self.hidden_size)).to(device) #hidden state
+        c_0 = Variable(torch.zeros(self.num_layers, x.size(0),\
+                                   self.hidden_size)).to(device) #internal state   
+        
         # Propagate input through LSTM
-		
         #lstm with input, hidden, and internal state
         output, (hn, cn) = self.lstm(x, (h_0, c_0)) 
 
@@ -172,7 +178,8 @@ hidden_size = 2 #number of features in hidden state
 num_layers = 1 #number of stacked lstm layers
 
 num_classes = 1 #number of output classes 
-lstm1 = LSTM1(num_classes, input_size, hidden_size, num_layers, X_train_tensors_final.shape[1]).to(device)
+lstm1 = LSTM1(num_classes, input_size, hidden_size, num_layers,\
+              X_train_tensors_final.shape[1]).to(device)
 
 criterion = torch.nn.MSELoss()    # mean-squared error for regression
 optimizer = torch.optim.Adam(lstm1.parameters(), lr=learning_rate)  # adam optimizer
@@ -228,7 +235,8 @@ plt.ylabel('Price')
 xpoint = np.arange(0,5000,1000)
 ypoint = np.arange(500000,5500000,500000)
 
-xidx = [X.index[0][0:10],X.index[1000][0:10],X.index[2000][0:10],X.index[3000][0:10],X.index[4000][0:10]]
+xidx = [X.index[0][0:10],X.index[1000][0:10],\
+        X.index[2000][0:10],X.index[3000][0:10],X.index[4000][0:10]]
 yidx = np.arange(500000,5500000,500000)
 
 plt.xticks(xpoint, xidx)
@@ -238,14 +246,12 @@ plt.legend()
 plt.show() 
 ```
 
-
-
-![predict chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\_posts\2021-05-26-Predict-ethereum\predict chart.png)
+![predict chart](C:\Users\KJH\Desktop\github.io\iproj222.github.io\assets\images\predict chart.png)
 
 ## 레퍼런스
 
-https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/
+[https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
 
-https://wegonnamakeit.tistory.com/52
+[https://wegonnamakeit.tistory.com/52](https://wegonnamakeit.tistory.com/52)
 
-https://coding-yoon.tistory.com/131
+[https://coding-yoon.tistory.com/131](https://coding-yoon.tistory.com/131)

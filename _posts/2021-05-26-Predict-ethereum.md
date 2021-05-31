@@ -10,13 +10,15 @@ toc: true
 last_modified_at: 2021-05-26T08:06:00-05:00
 ---
 
-# LSTM을 이용한 이더리움 시세 예측
+
 
 ```
 이 게시물은 한양대학교 AI+X 딥러닝 과제로 작성되었습니다.
 ```
 
 
+
+# I. RNN과 LSTM
 
 ## RNN(Recurrent Neural Network)
 
@@ -31,6 +33,8 @@ last_modified_at: 2021-05-26T08:06:00-05:00
 RNN은 **앞부분의 맥락이 길어질수록 앞부분의 정보가 충분히 전달되지 못하는 현상**이 있습니다. 활성화 함수로 tanh(hyperbolic tangent, 하이퍼볼릭 탄젠트)를 사용하기 때문입니다. tanh를 통과한 값은 -1과 1 사이이기 때문에 은닉층을 통과할수록 기울기가 사라지는 **기울기 소실 문제(vanishing gradient problem)**가 발생합니다.
 
 **LSTM**은 RNN의 단점을 보완한 모델입니다. LSTM은 기존 RNN의 Cell에서 게이트를 추가하여 불필요한 메모리는 잊어버리고 중요한 메모리는 기억합니다. 입력게이트, 망각게이트, 출력게이트가 추가되었으며 RNN과 비교하여 긴 시퀀스의 입력을 처리할 때 월등한 성능을 보입니다. LSTM에 대한 자세한 설명은 [ratsgo's blog](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/) 를 참고하시기 바랍니다.
+
+# II. 차트 데이터 분석 및 전처리
 
 ## bithumb API를 이용하여 차트 데이터 가져오기
 
@@ -98,7 +102,7 @@ X = X.drop(columns='date')
 y = df.iloc[:, 2:3]
 ```
 
-
+예측에 사용하지 않을 feature들을 지웁니다. 거래량(volume)과 시간(time), 날짜(date)를 삭제합니다. 
 
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -118,7 +122,8 @@ y_train = y_mm[:4040, :]
 y_test = y_mm[4040:, :] 
 ```
 
-
+사이킷런의 MinMaxScaler, StandardScaler를 사용하여 데이터를 정규화합니다.
+총 4340의 행 중 4040개만 학습에 사용합니다. 나머지 300개의 행은 test 데이터로 분리하여 모델을 평가하는데에 사용합니다.
 
 ```python
 import torch
@@ -138,6 +143,8 @@ X_test_tensors_final = torch.reshape(\
 ```
 
 
+
+# III. 모델 및 하이퍼파라미터 구성
 
 ## 모델
 
@@ -198,6 +205,8 @@ optimizer = torch.optim.Adam(lstm1.parameters(), lr=learning_rate)  # adam optim
 ```
 
 
+
+# IV. 학습 및 시세 예측
 
 ## 학습
 
@@ -260,10 +269,12 @@ plt.show()
 
 ![predict_chart](\assets\images\2021-05-26-Predict-ethereum\predict_chart.png)
 
-## 레퍼런스
 
-[https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
 
-[https://wegonnamakeit.tistory.com/52](https://wegonnamakeit.tistory.com/52)
+# 래퍼런스
 
-[https://coding-yoon.tistory.com/131](https://coding-yoon.tistory.com/131)
+[1] [https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/](https://ratsgo.github.io/natural%20language%20processing/2017/03/09/rnnlstm/)
+
+[2] [https://wegonnamakeit.tistory.com/52](https://wegonnamakeit.tistory.com/52)
+
+[3] [https://coding-yoon.tistory.com/131](https://coding-yoon.tistory.com/131)

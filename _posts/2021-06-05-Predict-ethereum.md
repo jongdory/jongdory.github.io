@@ -73,7 +73,7 @@ df = df.rename(index=df["date"])
 column들을 살펴보면 open은 시가, hign는 고가, low는 저가, close는 종가, volume은 거래량입니다.
 df를 확인해보면 다음과 같습니다.
 
-![df](\assets\images\2021-6-05-Predict-ethereum\df.png)
+![df](\assets\images\2021-06-05-Predict-ethereum\df.png)
 
 총 5001개의 행이 있습니다. 1시간 단위의 차트 데이터이므로 약 208일간의 이더리움 차트 데이터 입니다.
 

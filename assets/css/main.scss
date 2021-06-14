@@ -11,20 +11,5 @@ $sans-serif: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Roboto", "Segoe
 @import "minimal-mistakes"; // main partials
 
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
-@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
-
-html {
-    font-size: 14px; // originally 16px
-
-    @include breakpoint($medium) {
-        font-size: 16px; // originally 18px
-    }
-
-    @include breakpoint($large) {
-        font-size: 18px; // originally 20px
-    }
-
-    @include breakpoint($x-large) {
-        font-size: 20px; // originally 22px
-    }
-}
+// @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');

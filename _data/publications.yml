@@ -1,0 +1,90 @@
+main:
+  - title: "Posterior Samplings are Missing Modalities Generators for Medical Image Translation"
+    authors: <strong>Jonghun Kim</strong>
+    conference_short: ECCV
+    conference: European Conference on Computer Vision, 2026
+    image: ./assets/img/eccv26.png
+
+  - title: "Visual Instruction-Finetuned Language Model for Versatile Brain MR Image Tasks"
+    authors: <strong>Jonghun Kim</strong>, Sinyoung Ra, Hyunjin Park
+    conference_short: ICPR
+    conference: International Conference on Pattern Recognition, 2026
+    pdf: https://arxiv.org/pdf/2604.02748
+    image: ./assets/img/icpr26.png
+
+  - title: "Multi-LLM Collaborative MRI Report Generation for Visual Instruction Tuning in Brain Oncology"
+    authors: Sinyoung Ra*, <strong>Jonghun Kim</strong>*, Hyunjin Park (*Equal contribution)
+    conference_short: EMBC
+    conference: Annual International Conference of the IEEE Engineering in Medicine and Biology Society, 2026
+    image: ./assets/img/embc26.png
+
+  - title: "Privacy Preserving Chest X-ray Classification in Latent Space with Homomorphically Encrypted Neural Inference"
+    authors: <strong>Jonghun Kim</strong>, Gyeongdeok Jo, Sinyoung Ra, Hyunjin Park
+    conference_short: MICCAI
+    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention, 2025
+    pdf: https://papers.miccai.org/miccai-2025/paper/0621_paper.pdf
+    code: http://github.com/jongdory/Latent-HE
+    image: ./assets/img/miccai25_3.png
+
+  - title: "Simulating Post-Neoadjuvant Chemotherapy Breast Cancer MRI via Diffusion Model with Prompt Tuning"
+    authors: <strong>Jonghun Kim</strong>, Hyunjin Park
+    conference_short: ISBI
+    conference: IEEE International Symposium on Biomedical Imaging, 2025
+    pdf: https://arxiv.org/pdf/2509.24185
+    code: https://github.com/jongdory/NAC_sim
+    image: ./assets/img/isbi25.png
+
+  - title: "Tumor Synthesis Conditioned on Radiomics"
+    authors: <strong>Jonghun Kim</strong>, Inye Na, Eun Sook Ko, Hyunjin Park
+    conference_short: WACV
+    conference: Winter conference on applications of computer Vision, 2025
+    pdf: https://openaccess.thecvf.com/content/WACV2025/papers/Kim_Tumor_Synthesis_Conditioned_on_Radiomics_WACV_2025_paper.pdf
+    code: https://github.com/jongdory/TS-Radiomics
+    image: ./assets/img/wacv25.png
+
+  - title: "Radiomics-guided Multimodal Self-attention Network for Predicting Pathological Complete Response in Breast MRI"
+    authors: <strong>Jonghun Kim</strong>, Hyunjin Park
+    conference_short: ISBI
+    conference: IEEE International Symposium on Biomedical Imaging, 2024
+    pdf: https://arxiv.org/pdf/2406.02936
+    image: ./assets/img/isbi24.png
+
+  - title: "Domain Aware Multi-Task Pre-Training of 3D Swin Transformer for Brain MRI"
+    authors: <strong>Jonghun Kim</strong>*, Mansu Kim*, Hyunjin Park (*Equal contribution)
+    conference_short: ACCV
+    conference: Asian Conference on Computer Vision, 2024
+    pdf: https://openaccess.thecvf.com/content/ACCV2024/papers/Kim_Domain_Aware_Multi-Task_Pre-Training_of_3D_Swin_Transformer_for_Brain_ACCV_2024_paper.pdf
+    code: https://github.com/jongdory/DAMT
+    image: ./assets/img/DAMT.png
+
+  - title: "Adaptive latent diffusion model for 3d medical image to image translation: Multi-modal magnetic resonance imaging study"
+    authors: <strong>Jonghun Kim</strong>, Hyunjin Park
+    conference_short: WACV
+    conference: Winter conference on applications of computer Vision, 2024
+    pdf: https://openaccess.thecvf.com/content/WACV2024/papers/Kim_Adaptive_Latent_Diffusion_Model_for_3D_Medical_Image_to_Image_WACV_2024_paper.pdf
+    code: https://github.com/jongdory/ALDM
+    image: ./assets/img/ALDM.png
+
+  - title: "Visual prompt tuning for task-flexible medical image synthesis"
+    authors: <strong>Jonghun Kim</strong>, Hyunjin Park
+    conference_short: CMPB
+    conference: Computer Methods and Programs in Biomedicine, 2025
+    pdf: https://www.sciencedirect.com/science/article/pii/S016926072600012X
+    code: https://github.com/jongdory/VPT-Med
+    image: ./assets/img/cmpb26.png
+
+  - title: "Enhancing intracranial vessel segmentation using diffusion models without manual annotation for 3D Time-of-Flight Magnetic Resonance Angiography"
+    authors: <strong>Jonghun Kim</strong>, Inye Na, Jiwon Chung, Ha-Na Song, Kyungseo Kim, Seongvin Ju, Mi-Yeon Eun, Woo-Keun Seo, Hyunjin Park
+    conference_short: CMIG
+    conference: Computerized Medical Imaging and Graphics, 2025
+    pdf: https://www.sciencedirect.com/science/article/pii/S0895611125001600
+    code: https://github.com/jongdory/Vessel-Diffusion
+    image: ./assets/img/cmig25.png
+
+  - title: "Weakly-supervised segmentation using sparse single point annotations for lumen and wall of carotid arteries in 3D MRI"
+    authors: <strong>Jonghun Kim</strong>, Inye Na, Junmo Kwon, Woo-Keun Seo, Hyunjin Park
+    conference_short: CMPB
+    conference: Computer Methods and Programs in Biomedicine, 2025
+    pdf: https://www.sciencedirect.com/science/article/pii/S0169260725002986
+    code: https://github.com/jongdory/CASCA
+    image: ./assets/img/cmpb25_2.png

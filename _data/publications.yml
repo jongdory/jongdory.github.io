@@ -3,6 +3,7 @@ main:
     authors: <strong>Jonghun Kim</strong>
     conference_short: ECCV
     conference: European Conference on Computer Vision, 2026
+    code: https://github.com/jongdory/PS-MIT
     image: ./assets/img/eccv26.png
 
   - title: "Visual Instruction-Finetuned Language Model for Versatile Brain MR Image Tasks"
@@ -16,6 +17,7 @@ main:
     authors: Sinyoung Ra*, <strong>Jonghun Kim</strong>*, Hyunjin Park (*Equal contribution)
     conference_short: EMBC
     conference: Annual International Conference of the IEEE Engineering in Medicine and Biology Society, 2026
+    pdf: https://arxiv.org/pdf/2607.14581
     image: ./assets/img/embc26.png
 
   - title: "Privacy Preserving Chest X-ray Classification in Latent Space with Homomorphically Encrypted Neural Inference"

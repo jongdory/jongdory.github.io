@@ -3,6 +3,7 @@ main:
     authors: <strong>Jonghun Kim</strong>
     conference_short: ECCV
     conference: European Conference on Computer Vision, 2026
+    pdf: https://arxiv.org/pdf/2607.18763
     code: https://github.com/jongdory/PS-MIT
     image: ./assets/img/eccv26.png
 

@@ -1,4 +1,16 @@
 main:
+  - title: "Anatomical Prior-Guided Routing for 3D Lung Tumor Segmentation"
+    authors: Uihyeon Maeng*, <strong>Jonghun Kim</strong>*, Hyunjin Park (*Equal contribution)
+    conference_short: ACCV
+    conference: Asian Conference on Computer Vision, 2026
+    image: ./assets/img/accv26-2.png
+
+  - title: "Mixture of Multi-Sequence Feature Difference for Contrast-Enhanced MRI Synthesis"
+    authors: <strong>Jonghun Kim</strong>, Junmo Kwon, Hyunjin Park
+    conference_short: ACCV
+    conference: Asian Conference on Computer Vision, 2026
+    image: ./assets/img/accv26-1.png
+
   - title: "Posterior Samplings are Missing Modalities Generators for Medical Image Translation"
     authors: <strong>Jonghun Kim</strong>
     conference_short: ECCV

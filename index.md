@@ -10,8 +10,9 @@ I am a Ph.D. candidate at <a href="https://mipskku.wixsite.com/mipl">Medical Ima
 ## News
 
 <ul id="news-list">
-  <li><strong>[Jun. 2026]</strong> A paper (PS-MIT) is accepted to ECCV 2026.</li>
-  <li><strong>[Jun. 2026]</strong> A paper (AgeCMBNet) is accepted to MICCAI 2026.</li>
+  <li><strong>[Jun. 2026]</strong> 2 paperㄴ (<a href="https://arxiv.org/pdf/2610.21703">MoFD</a>, <a href="https://arxiv.org/pdf/2610.39414">ARPM</a>) are accepted to ACCV 2026.</li>
+  <li><strong>[Jun. 2026]</strong> A paper (<a href="https://arxiv.org/pdf/2607.18763">PS-MIT</a>) is accepted to ECCV 2026.</li>
+  <li><strong>[Jun. 2026]</strong> A paper (<a href="https://papers.miccai.org/miccai-2026/paper/0011_paper.pdf">AgeCMBNet</a>) is accepted to MICCAI 2026.</li>
   <li><strong>[Mar. 2026]</strong> A paper (<a href="https://arxiv.org/pdf/2604.02748">LLaBIT</a>) is accepted to ICPR 2026.</li>
   <li><strong>[Mar. 2026]</strong> A paper (<a href="https://www.sciencedirect.com/science/article/pii/S016926072600012X">VPT-Med</a>) is accepted to CMPB.</li>
   <li><strong>[Sep. 2025]</strong> A paper (<a href="https://www.sciencedirect.com/science/article/pii/S0895611125001600">Vessel-Diffusion</a>) is accepted to CMIG.</li>
